@@ -1,0 +1,24 @@
+{
+  "name": "Brawndo",
+  "version": "1.0.0",
+  "description": "A app that helps plants grow",
+  "main": "brawndo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tevvels/Brawndo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tevvels/Brawndo/issues"
+  },
+  "homepage": "https://github.com/Tevvels/Brawndo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1"
+  }
+}
