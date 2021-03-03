@@ -1,9 +1,9 @@
 const db = require('..models/');
 
 module.exports = (app) => {
-	app.get('/brawndo', (req, res) => {
-		db.Brawndo.findAll({}).then((data) => {
-			console.log(data);
+	// get route that returns all plants
+	app.get('/api/plants', (req, res) => {
+		db.Plant.findAll({}).then((data) => {
 			res.json(data);
 		});
 	});
