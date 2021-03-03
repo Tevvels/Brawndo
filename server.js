@@ -1,12 +1,15 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const htmlRoutes = require('./routes/htmlRoutes.js');
+const apiRoutes = require('./routes/apiRoutes.js');
+
+// sets up express app
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const htmlRouter = require('./routes/htmlRoutes.js');
-const apiRouter = require('./routes/apiRoutes.js');
+// require models for syncing
+const db = require('./models');
 
-const models = require('./models');
 const sequelize = require('./config/connection');
 app.engine('handlebars', exphbs);
 app.set('view engine', 'handlebars');
@@ -16,14 +19,9 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-const apiRoutes = require('./routes/apiRoutes.js');
-const htmlRoutes = require('./routes/htmlRoutes.js');
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+htmlRoutes(app);
+apiRoutes(app);
 
-htmlRouter(app);
-apiRouter(app);
-
-sequelize.sync().then(() => {
+db.sequelize.sync().then(() => {
 	app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
 });
