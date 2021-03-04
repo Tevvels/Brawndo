@@ -1,12 +1,15 @@
-const router = require("express").Router()
-const db = require('./models');
+const db = require('../models');
 
+module.exports = (app) => {
+	// get route that returns all plants
+	app.get('/api/plants', (req, res) => {
+		db.Plant.findAll({}).then((data) => {
+			res.json(data);
+		});
+	});
 
-router.get("/brawndo", (req,res) => {
- db.Brawndo.findAll({}).then(data => {
-     console.log(data)
-     res.json(data)
- })
-})
-
-module.exports = router
+	// post route that inserts a new plant
+	app.post('/api/plants', (req, res) => {
+		db.Plant.create(req.body).then((data) => res.json(data));
+	});
+};
