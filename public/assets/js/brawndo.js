@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const droplet = document.querySelectorAll('.garden_plant--water');
 let waterPectange = 0;
 let newNumber =   parseInt(waterPectange) 
@@ -24,3 +25,6 @@ go();
 
 
 
+=======
+console.log('Branwdo.js connected!');
+>>>>>>> 079663cd43a4cb28097106e5f12dbb72eba0473a
