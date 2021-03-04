@@ -5,7 +5,7 @@ const express = require('express');
 module.exports = (app) => {
 	app.get('/', function (req, res) {
 		// * If plants exist in database, redirect to /garden
-		// res.redirect("/garden");
+		res.redirect('/garden');
 		// * Else redirect to create garden page
 		// res.redirect("/createGarden");
 	});
@@ -22,18 +22,9 @@ module.exports = (app) => {
 				return res.render('index', hbsObject);
 			});
 	});
+
+	// post route that inserts a new plant
+	app.post('/garden/create', (req, res) => {
+		db.Plant.create(req.body).then((data) => res.redirect('/'));
+	});
 };
-
-// module.exports = (app) => {
-// 	// get route that returns all plants
-// 	app.get('/api/plants', (req, res) => {
-// 		db.Plant.findAll({}).then((data) => {
-// 			res.json(data);
-// 		});
-// 	});
-
-// 	// post route that inserts a new plant
-// 	app.post('/api/plants', (req, res) => {
-// 		db.Plant.create(req.body).then((data) => res.json(data));
-// 	});
-// };
