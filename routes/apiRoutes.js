@@ -25,7 +25,9 @@ module.exports = (app) => {
 		});
 	});
 
-	// app.get('/garden/create', function (req, res) {});
+	app.get('/garden/create', function (req, res) {
+		res.render('createGarden');
+	});
 
 	// post route that inserts a new plant into Plants in brawndo_db
 	app.post('/garden/create', (req, res) => {
