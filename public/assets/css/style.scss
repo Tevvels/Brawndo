@@ -1,0 +1,45 @@
+*{
+    background:rgba(200,200,200,0.45);
+    border: 1px solid rgba(245,245,245,0.45);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.garden{
+    position: relative;
+    margin: 0 auto ;
+    height: 250px;
+    width: 85%;
+    box-shadow: 0 5px 10px black;
+    margin-top:35px;
+  
+    &_plant{
+        display: flex;
+
+
+        &--planttype{
+            height: 80%;
+            width: 75%;
+        }
+        &--water{
+            height: 100px;
+            width:  100px;
+            transition: all 2s;
+            // background: linear-gradient(to bottom,white 90%,#00A6C8);
+
+            &:hover{
+                position: absolute;
+                height:200px;
+                width: 200px;
+    
+            }
+
+        }
+
+        &--location{
+            height: 100px;
+            width: 100px;
+        }
+    }
+}
