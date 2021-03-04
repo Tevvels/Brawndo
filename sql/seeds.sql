@@ -1,1 +1,1 @@
-INSERT INTO plants (plant_name, outdoor,indoor, water_frequency,water_times)VALUES("ficus", false, true, 1,2);
+INSERT INTO Plants (name, outdoor, indoor, waterFrequency, waterTime)VALUES("ficus", false, true, 1,2);
