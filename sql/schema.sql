@@ -8,7 +8,6 @@ plant_name VARCHAR(100) NOT NULL,
 outdoor BOOLEAN NOT NULL,
 indoor BOOLEAN NOT NULL,
 water_frequency INT NOT NULL,
-water_times INT NOT NULL
+water_times INT NOT NULL,
+PRIMARY KEY(id)
 );
-
-

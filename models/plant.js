@@ -7,6 +7,27 @@ module.exports = (sequelize, DataTypes) => {
 				len: [1, 80],
 			},
 		},
+		outdoor: {
+			type: DataTypes.BOOLEAN,
+			allowNull: false,
+		},
+		indoor: {
+			type: DataTypes.BOOLEAN,
+			allowNull: false,
+		},
+		indoor: {
+			type: DataTypes.BOOLEAN,
+			allowNull: false,
+		},
+		waterFrequency: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+		waterTime: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		}
+
 	});
 
 	return Plant;
