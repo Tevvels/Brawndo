@@ -10,3 +10,4 @@ indoor BOOLEAN NOT NULL,
 water_frequency INT NOT NULL,
 water_times INT NOT NULL,
 );
+
