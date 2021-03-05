@@ -1,6 +1,6 @@
 const db = require('../models');
 const express = require('express');
-// var router = express.Router();
+var router = express.Router();
 
 module.exports = (app) => {
 	app.get('/', function (req, res) {
@@ -18,10 +18,10 @@ module.exports = (app) => {
 
 	// get route that displays all plants
 	app.get('/garden', function (req, res) {
+		console.log('get garden called');
 		db.Plant.findAll().then(function (data) {
-			let dataset = data[0];
-			console.log(dataset);
-			var hbsObject = { garden: data };
+			// console.log(data);
+			let hbsObject = { garden: data };
 			return res.render('index', hbsObject);
 		});
 	});
