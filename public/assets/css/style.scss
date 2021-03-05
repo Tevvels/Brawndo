@@ -1,6 +1,6 @@
 
 *{
-    background:rgba(200,200,200,0.45);
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -15,51 +15,53 @@ footer{
     bottom:0;
 }
 
-@media only screen and (max-width: 680px){
-    .garden{
-        margin: 25px;
-        position: relative;
-        margin: 0 auto ;
+// @media only screen and (max-width: 680px){
+//     .nav{
+//         height: 100px;
+//     }
+//     .garden{
+//         margin: 25px;
+//         position: relative;
+//         margin: 0 auto ;
 
-        height: 100vh;
+//         height: 100vh;
       
-        &_plant{
-            display: flex;
-            height: 500px;
-            width: 85%;
-            box-shadow: 0 5px 10px black;
-            margin-top:35px;
+//         &_plant{
+//             display: flex;
+//             height: 500px;
+//             width: 85%;
+//             box-shadow: 0 5px 10px black;
+//             margin-top:35px;
     
     
-            &--planttype{
-                height: 80%;
-                width: 75%;
-            }
-            &--water{
-                height: 250px;
-                width:  250px;
-                transition: all 2s;
-                // background: linear-gradient(to bottom,white 90%,#00A6C8);
+//             &--planttype{
+//                 height: 80%;
+//                 width: 75%;
+//             }
+//             &--water{
+//                 height: 250px;
+//                 width:  250px;
+//                 transition: all 2s;
+//                 // background: linear-gradient(to bottom,white 90%,#00A6C8);
     
-                &:hover{
-                    position: absolute;
-                    height:200px;
-                    width: 200px;
-        
-                }
+//               
+//                 }
     
-            }
+//             }
     
-            &--location{
-                height: 250px;
-                width: 250px;
-                background: pink;
-            }
-        }
-    }
+//             &--location{
+//                 height: 250px;
+//                 width: 250px;
+//                 background: pink;
+//             }
+//         }
+//     }
     
-}
+// }
 @media only screen and (min-width: 768px){
+    .nav{
+        height: 100px;
+    }
     .garden{
         margin: 25px;
         position: relative;
@@ -84,13 +86,7 @@ footer{
                 width:  250px;
                 transition: all 2s;
                 // background: linear-gradient(to bottom,white 90%,#00A6C8);
-    
-                &:hover{
-                    position: absolute;
-                    height:200px;
-                    width: 200px;
-        
-                }
+
     
             }
     
@@ -133,13 +129,7 @@ footer{
                 width:  100px;
                 transition: all 2s;
                 // background: linear-gradient(to bottom,white 90%,#00A6C8);
-    
-                &:hover{
-                    position: absolute;
-                    height:200px;
-                    width: 200px;
-        
-                }
+
     
             }
     
@@ -180,13 +170,7 @@ footer{
                 width:  250px;
                 transition: all 2s;
                 // background: linear-gradient(to bottom,white 90%,#00A6C8);
-    
-                &:hover{
-                    position: absolute;
-                    height:200px;
-                    width: 200px;
-        
-                }
+
     
             }
     
@@ -196,10 +180,5 @@ footer{
                 background: gold;
             }
         }
-    }
-    
-
-
-
-
+    }   
 }

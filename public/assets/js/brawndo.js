@@ -35,6 +35,7 @@ garden.appendChild(article);
 const droplet = document.querySelectorAll('.garden_plant--water');
 
 let waterPectange = 0;
+
 let newNumber = parseInt(waterPectange);
 
 go = () => {
