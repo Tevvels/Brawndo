@@ -1,4 +1,4 @@
-console.log('Branwdo.js connected!');
+console.log('Brawndo.js connected!');
 
 document.addEventListener('DOMContentLoaded', (event) => {
 	console.log('DOM loaded!');
@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 			const newPlant = {
 				name: document.getElementById('plantName').value.trim(),
-				indoorOutdoor: document.getElementById('indoorOutdoor'),
-				waterFrequency: document.getElementById('waterFrequency').value.trim(),
-				waterTime: document.getElementById('waterTime').value.trim(),
+				indoorOutdoor: document.getElementById('indoorOutdoor').checked,
+				// waterFrequency: document.getElementById('waterFrequency').value.trim(),
+				// lastWatered: document.getElementById('lastWatered').value.trim(),
 			};
 
-			console.log(newPlant);
+			console.log(newPlant.indoorOutdoor);
 
 			fetch('/garden/add', {
 				method: 'POST',
@@ -28,13 +28,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 				body: JSON.stringify(newPlant),
 			}).then(() => {
-				// document.getElementById('plantName').value = '';
 				location.reload();
 			});
 		});
 	}
-
-	var options;
-	var elems = document.querySelectorAll('.datepicker');
-	var instances = M.Datepicker.init(elems, options);
 });
