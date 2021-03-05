@@ -3,30 +3,38 @@ console.log('Branwdo.js connected!');
 document.addEventListener('DOMContentLoaded', (event) => {
 	console.log('DOM loaded!');
 
-	const createBurgerBtn = document.getElementById('create-form');
+	const addPlantForm = document.getElementById('add-plant-form');
 
-	if (createBurgerBtn) {
-		createBurgerBtn.addEventListener('submit', (e) => {
+	if (addPlantForm) {
+		addPlantForm.addEventListener('submit', (e) => {
 			e.preventDefault();
-			console.log('submitted!');
+			console.log('Submit button clicked!');
 
-			const newBurger = {
-				burger_name: document.getElementById('burger').value.trim(),
-				devoured: false,
+			const newPlant = {
+				name: document.getElementById('plantName').value.trim(),
+				indoorOutdoor: document.getElementById('indoorOutdoor'),
+				waterFrequency: document.getElementById('waterFrequency').value.trim(),
+				waterTime: document.getElementById('waterTime').value.trim(),
 			};
 
-			fetch('/api/burgers', {
+			console.log(newPlant);
+
+			fetch('/garden/add', {
 				method: 'POST',
 				headers: {
 					Accept: 'application/json',
 					'Content-Type': 'application/json',
 				},
 
-				body: JSON.stringify(newBurger),
+				body: JSON.stringify(newPlant),
 			}).then(() => {
-				document.getElementById('burger').value = '';
+				// document.getElementById('plantName').value = '';
 				location.reload();
 			});
 		});
 	}
+
+	var options;
+	var elems = document.querySelectorAll('.datepicker');
+	var instances = M.Datepicker.init(elems, options);
 });
