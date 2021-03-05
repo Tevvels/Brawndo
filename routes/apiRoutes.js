@@ -11,7 +11,7 @@ module.exports = (app) => {
 			if (data) {
 				res.redirect('/garden');
 			} else {
-				res.redirect('/garden/create');
+				res.redirect('/garden/add');
 			}
 		});
 	});
@@ -23,11 +23,6 @@ module.exports = (app) => {
 			var hbsObject = { garden: data };
 			return res.render('index', hbsObject);
 		});
-	});
-
-	// route to display 'create garden' page
-	app.get('/garden/create', function (req, res) {
-		res.render('createGarden');
 	});
 
 	// route to display 'add plant' page
