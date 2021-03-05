@@ -19,7 +19,8 @@ module.exports = (app) => {
 	// get route that displays all plants
 	app.get('/garden', function (req, res) {
 		db.Plant.findAll().then(function (data) {
-			console.log(data);
+			let dataset = data[0];
+			console.log(dataset);
 			var hbsObject = { garden: data };
 			return res.render('index', hbsObject);
 		});
