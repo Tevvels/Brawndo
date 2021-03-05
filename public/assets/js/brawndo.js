@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			const newPlant = {
 				name: document.getElementById('plantName').value.trim(),
 				indoorOutdoor: document.getElementById('indoorOutdoor').checked,
-				// waterFrequency: document.getElementById('waterFrequency').value.trim(),
-				// lastWatered: document.getElementById('lastWatered').value.trim(),
+				waterFrequency: document.getElementById('waterFrequency').value.trim(),
+				lastWatered: document.getElementById('lastWatered').value.trim(),
 			};
 
-			console.log(newPlant.indoorOutdoor);
+			console.log(newPlant);
 
 			fetch('/garden/add', {
 				method: 'POST',
