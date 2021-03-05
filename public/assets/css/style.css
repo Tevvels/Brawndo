@@ -20,16 +20,17 @@ footer {
     margin: 25px;
     position: relative;
     margin: 0 auto;
-    height: 500px;
-    width: 85%;
-    -webkit-box-shadow: 0 5px 10px black;
-            box-shadow: 0 5px 10px black;
-    margin-top: 35px;
+    height: 100vh;
   }
   .garden_plant {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 500px;
+    width: 85%;
+    -webkit-box-shadow: 0 5px 10px black;
+            box-shadow: 0 5px 10px black;
+    margin-top: 35px;
   }
   .garden_plant--planttype {
     height: 80%;
@@ -58,16 +59,16 @@ footer {
     margin: 25px;
     position: relative;
     margin: 0 auto;
-    height: 500px;
-    width: 85%;
-    -webkit-box-shadow: 0 5px 10px black;
-            box-shadow: 0 5px 10px black;
-    margin-top: 35px;
   }
   .garden_plant {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 65px;
+    height: 500px;
+    width: 85%;
+    -webkit-box-shadow: 0 5px 10px black;
+            box-shadow: 0 5px 10px black;
   }
   .garden_plant--planttype {
     height: 80%;
@@ -137,16 +138,16 @@ footer {
     margin: 25px;
     position: relative;
     margin: 0 auto;
-    height: 500px;
-    width: 85%;
-    -webkit-box-shadow: 0 5px 10px black;
-            box-shadow: 0 5px 10px black;
     margin-top: 35px;
   }
   .garden_plant {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 500px;
+    width: 85%;
+    -webkit-box-shadow: 0 5px 10px black;
+            box-shadow: 0 5px 10px black;
   }
   .garden_plant--planttype {
     height: 80%;

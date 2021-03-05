@@ -20,15 +20,15 @@ footer{
         margin: 25px;
         position: relative;
         margin: 0 auto ;
-        height: 500px;
-        width: 85%;
-        box-shadow: 0 5px 10px black;
-        margin-top:35px;
-        
+
+        height: 100vh;
       
         &_plant{
             display: flex;
-           
+            height: 500px;
+            width: 85%;
+            box-shadow: 0 5px 10px black;
+            margin-top:35px;
     
     
             &--planttype{
@@ -64,16 +64,16 @@ footer{
         margin: 25px;
         position: relative;
         margin: 0 auto ;
-        height: 500px;
-        width: 85%;
-        box-shadow: 0 5px 10px black;
-        margin-top:35px;
+
         
       
         &_plant{
             display: flex;
+           margin-top:65px;
            
-    
+            height: 500px;
+         width: 85%;
+        box-shadow: 0 5px 10px black;
     
             &--planttype{
                 height: 80%;
@@ -161,15 +161,14 @@ footer{
         margin: 25px;
         position: relative;
         margin: 0 auto ;
-        height: 500px;
-        width: 85%;
-        box-shadow: 0 5px 10px black;
         margin-top:35px;
         
       
         &_plant{
             display: flex;
-           
+            height: 500px;
+            width: 85%;
+            box-shadow: 0 5px 10px black;
     
     
             &--planttype{

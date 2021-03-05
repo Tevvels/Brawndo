@@ -1,5 +1,41 @@
-const droplet = document.querySelectorAll('.garden_plant--water');
 const garden = document.querySelector('.garden');
+
+let article = document.createElement("article");
+let div = document.createElement("div");
+let imgdrop = document.createElement("img");
+let imgfence = document.createElement("img");
+let imggnome = document.createElement("img");
+let divTwo = document.createElement("div");
+let divtype = document.createElement("div");
+let divwater = document.createElement("div");
+let divlocation = document.createElement("div");
+
+imgfence.setAttribute("src","../assets/img/029-fence.svg");
+imggnome.setAttribute("src","../assets/img/012-dwarf.svg");
+imgdrop.setAttribute("src","../assets/img/036-drop.svg");
+
+
+
+article.classList.add("garden_plant")
+div.classList.add("garden_plant--planttype")
+divTwo.classList.add("garden_plant--subrow")
+divwater.classList.add("garden_plant--water")
+divlocation.classList.add("garden_plant--location")
+
+div.appendChild(imggnome)
+divwater.appendChild(imgdrop)
+divlocation.appendChild(imgfence)
+
+divTwo.appendChild(divwater);
+divTwo.appendChild(divlocation);
+
+article.appendChild(div);
+article.appendChild(divTwo);
+
+garden.appendChild(article);
+
+const droplet = document.querySelectorAll('.garden_plant--water');
+
 
 let waterPectange = 0;
 let newNumber =   parseInt(waterPectange) 
@@ -20,20 +56,5 @@ setInterval(()=>{
     },500)
 }
 
+
 go();
-
-let article = document.createElement("article");
-let div = document.createElement("div");
-let img = document.createElement("img");
-let divTwo = document.createElement("div");
-
-
-article.classList.add("garden_plant")
-div.classList.add("garden_plant--planttype")
-divTwo.classList.add("garden_plant--subrow")
-
-div.appendChild(divTwo);
-
-article.appendChild(div);
-garden.appendChild(article);
-
