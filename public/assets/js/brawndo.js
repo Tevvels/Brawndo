@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 const droplet = document.querySelectorAll('.garden_plant--water');
+const garden = document.querySelector('.garden');
+
 let waterPectange = 0;
 let newNumber =   parseInt(waterPectange) 
 
@@ -16,15 +17,23 @@ setInterval(()=>{
         }else {
             window.clearTimeout();
         }
-
     },500)
-
 }
 
 go();
 
+let article = document.createElement("article");
+let div = document.createElement("div");
+let img = document.createElement("img");
+let divTwo = document.createElement("div");
 
 
-=======
-console.log('Branwdo.js connected!');
->>>>>>> 079663cd43a4cb28097106e5f12dbb72eba0473a
+article.classList.add("garden_plant")
+div.classList.add("garden_plant--planttype")
+divTwo.classList.add("garden_plant--subrow")
+
+div.appendChild(divTwo);
+
+article.appendChild(div);
+garden.appendChild(article);
+

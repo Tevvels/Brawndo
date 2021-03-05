@@ -1,45 +1,206 @@
+
 *{
     background:rgba(200,200,200,0.45);
-    border: 1px solid rgba(245,245,245,0.45);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.garden{
-    position: relative;
-    margin: 0 auto ;
-    height: 250px;
-    width: 85%;
-    box-shadow: 0 5px 10px black;
-    margin-top:35px;
-  
-    &_plant{
-        display: flex;
+.container {
+    height: 100vh;;
+}
 
+footer{
+    position: fixed;
+    bottom:0;
+}
 
-        &--planttype{
-            height: 80%;
-            width: 75%;
-        }
-        &--water{
-            height: 100px;
-            width:  100px;
-            transition: all 2s;
-            // background: linear-gradient(to bottom,white 90%,#00A6C8);
-
-            &:hover{
-                position: absolute;
-                height:200px;
-                width: 200px;
+@media only screen and (max-width: 680px){
+    .garden{
+        margin: 25px;
+        position: relative;
+        margin: 0 auto ;
+        height: 500px;
+        width: 85%;
+        box-shadow: 0 5px 10px black;
+        margin-top:35px;
+        
+      
+        &_plant{
+            display: flex;
+           
+    
+    
+            &--planttype{
+                height: 80%;
+                width: 75%;
+            }
+            &--water{
+                height: 250px;
+                width:  250px;
+                transition: all 2s;
+                // background: linear-gradient(to bottom,white 90%,#00A6C8);
+    
+                &:hover{
+                    position: absolute;
+                    height:200px;
+                    width: 200px;
+        
+                }
     
             }
-
-        }
-
-        &--location{
-            height: 100px;
-            width: 100px;
+    
+            &--location{
+                height: 250px;
+                width: 250px;
+                background: pink;
+            }
         }
     }
+    
+}
+@media only screen and (min-width: 768px){
+    .garden{
+        margin: 25px;
+        position: relative;
+        margin: 0 auto ;
+        height: 500px;
+        width: 85%;
+        box-shadow: 0 5px 10px black;
+        margin-top:35px;
+        
+      
+        &_plant{
+            display: flex;
+           
+    
+    
+            &--planttype{
+                height: 80%;
+                width: 75%;
+            }
+            &--water{
+                height: 250px;
+                width:  250px;
+                transition: all 2s;
+                // background: linear-gradient(to bottom,white 90%,#00A6C8);
+    
+                &:hover{
+                    position: absolute;
+                    height:200px;
+                    width: 200px;
+        
+                }
+    
+            }
+    
+            &--location{
+                height: 250px;
+                width: 250px;
+                background: purple;
+            }
+        }
+    }
+    
+
+}
+
+@media only screen and (min-width: 1240px){
+
+    .garden{
+        margin: 25px;
+        position: relative;
+        margin: 0 auto ;
+        
+     
+        display: flex;
+        
+      
+        &_plant{
+            display: flex;
+            height: 200px;
+            width: 350px;
+            box-shadow: 0 5px 10px black;
+            margin:35px;
+    
+    
+            &--planttype{
+                height: 80%;
+                width: 75%;
+            }
+            &--water{
+                height: 100px;
+                width:  100px;
+                transition: all 2s;
+                // background: linear-gradient(to bottom,white 90%,#00A6C8);
+    
+                &:hover{
+                    position: absolute;
+                    height:200px;
+                    width: 200px;
+        
+                }
+    
+            }
+    
+            &--location{
+                height: 100px;
+                width: 100px;
+                background: maroon;
+            }
+        }
+    }
+    
+
+}
+
+@media only screen and (min-width: 1559px){
+
+
+    .garden{
+        margin: 25px;
+        position: relative;
+        margin: 0 auto ;
+        height: 500px;
+        width: 85%;
+        box-shadow: 0 5px 10px black;
+        margin-top:35px;
+        
+      
+        &_plant{
+            display: flex;
+           
+    
+    
+            &--planttype{
+                height: 80%;
+                width: 75%;
+            }
+            &--water{
+                height: 250px;
+                width:  250px;
+                transition: all 2s;
+                // background: linear-gradient(to bottom,white 90%,#00A6C8);
+    
+                &:hover{
+                    position: absolute;
+                    height:200px;
+                    width: 200px;
+        
+                }
+    
+            }
+    
+            &--location{
+                height: 250px;
+                width: 250px;
+                background: gold;
+            }
+        }
+    }
+    
+
+
+
+
 }
