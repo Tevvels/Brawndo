@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <form class="col s12" id="add-plant-form">
+                <div class="center title">Let's add a plant! </div>
+                <div class="row">
+                    <div class="input-field col s12 m7">
+                        <input placeholder="EX: Strawberry" id="plantName" type="search" class="validate">
+                        <label for="plantName">Plant Name</label>
+                    </div>
+
+                    <div class="switch center">
+                        <label>
+                            Indoor
+                            <input id="indoorOutdoor" type="checkbox">
+                            <span class="lever"></span>
+                            Outdoor
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p> Water Frequency</p>
+                    <p class="range-field col s12 m7">
+                        <input type="range" id="waterFrequency" min="0" max="10">
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m7">
+                        <p>Last Watered</p>
+                        <input type="date" class="datepicker" id="lastWatered">
+                    </div>
+                </div>
+
+                <div class="center">
+                    <button class="btn waves-effect waves-light " id="submit">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+
+        </div>
+    </div>
+    </form>
+</div>

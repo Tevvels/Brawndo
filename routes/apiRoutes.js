@@ -25,12 +25,18 @@ module.exports = (app) => {
 		});
 	});
 
+	// route to display 'create garden' page
 	app.get('/garden/create', function (req, res) {
 		res.render('createGarden');
 	});
 
+	// route to display 'add plant' page
+	app.get('/garden/add', function (req, res) {
+		res.render('addPlant');
+	});
+
 	// post route that inserts a new plant into Plants in brawndo_db
-	app.post('/garden/create', (req, res) => {
+	app.post('/garden/add', (req, res) => {
 		db.Plant.create(req.body).then(res.redirect('/garden'));
 	});
 };
