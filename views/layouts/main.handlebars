@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
     <title>Brawndo</title>
 
     {{!-- favicon information --}}
@@ -16,7 +15,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     {{!-- personal style sheet --}}
-    <link rel="stylesheet" href="../../public/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
 
 
@@ -24,7 +23,23 @@
 
 
 <body>
+
+    <nav>
+        <div class="nav-wrapper green darken-1">
+            <a href="#" class="brand-logo">Brawndo<i class="material-icons">local_florist</i></a>
+
+        </div>
+    </nav>
+
     {{{ body }}}
+
+
+    <footer class="green darken-1">
+        <p class="white-text"> © 2021 Copyright <a href="https://github.com/lukeoxner">Luke Oxner, </a><a
+                href="https://github.com/trevvels">Christopher Watkins, </a><a
+                href="https://github.com/domihorinka">Dominique
+                Horinka, </a><a href="https://github.com/wtekverk">WendyTekverk </a></p>
+    </footer>
 
     {{!-- connect to materialize js --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -33,7 +48,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
 
     {{!-- connect to brawndo JS --}}
-    <script src="/public/js/brawndo.js"></script>
+    <script src="assets/js/brawndo.js"></script>
 </body>
 
 </html>
