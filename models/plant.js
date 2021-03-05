@@ -18,8 +18,7 @@ module.exports = (sequelize, DataTypes) => {
 		lastWatered: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
-		}
-
+		},
 	});
 
 	return Plant;
