@@ -1,0 +1,173 @@
+* {
+  background: rgba(200, 200, 200, 0.45);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 680px) {
+  .garden {
+    margin: 25px;
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  .garden_plant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 500px;
+    width: 85%;
+    -webkit-box-shadow: 0 5px 10px black;
+            box-shadow: 0 5px 10px black;
+    margin-top: 35px;
+  }
+  .garden_plant--planttype {
+    height: 80%;
+    width: 75%;
+  }
+  .garden_plant--water {
+    height: 250px;
+    width: 250px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .garden_plant--water:hover {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+  .garden_plant--location {
+    height: 250px;
+    width: 250px;
+    background: pink;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .garden {
+    margin: 25px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .garden_plant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 65px;
+    height: 500px;
+    width: 85%;
+    -webkit-box-shadow: 0 5px 10px black;
+            box-shadow: 0 5px 10px black;
+  }
+  .garden_plant--planttype {
+    height: 80%;
+    width: 75%;
+  }
+  .garden_plant--water {
+    height: 250px;
+    width: 250px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .garden_plant--water:hover {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+  .garden_plant--location {
+    height: 250px;
+    width: 250px;
+    background: purple;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .garden {
+    margin: 25px;
+    position: relative;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .garden_plant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 200px;
+    width: 350px;
+    -webkit-box-shadow: 0 5px 10px black;
+            box-shadow: 0 5px 10px black;
+    margin: 35px;
+  }
+  .garden_plant--planttype {
+    height: 80%;
+    width: 75%;
+  }
+  .garden_plant--water {
+    height: 100px;
+    width: 100px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .garden_plant--water:hover {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+  .garden_plant--location {
+    height: 100px;
+    width: 100px;
+    background: maroon;
+  }
+}
+
+@media only screen and (min-width: 1559px) {
+  .garden {
+    margin: 25px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+  .garden_plant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 500px;
+    width: 85%;
+    -webkit-box-shadow: 0 5px 10px black;
+            box-shadow: 0 5px 10px black;
+  }
+  .garden_plant--planttype {
+    height: 80%;
+    width: 75%;
+  }
+  .garden_plant--water {
+    height: 250px;
+    width: 250px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .garden_plant--water:hover {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+  .garden_plant--location {
+    height: 250px;
+    width: 250px;
+    background: gold;
+  }
+}
+/*# sourceMappingURL=style.css.map */
