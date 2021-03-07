@@ -8,16 +8,17 @@ module.exports = (sequelize, DataTypes) => {
 			},
 		},
 		outdoorIndoor: {
-			type: DataTypes.BOOLEAN,
-			allowNull: false,
+			type: DataTypes.BOOLEAN ,
+			defaultValue: 'true',
 		},
 		waterFrequency: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
 		},
 		lastWatered: {
-			type: DataTypes.INTEGER,
-			allowNull: false,
+			type: DataTypes.DATE,
+			allowNull: true,
+			defaultValue: 12,
 		},
 	});
 

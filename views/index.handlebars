@@ -3,9 +3,14 @@
     <h3 class="center">My Garden</h3>
 
     {{!-- for each loops here using garden info from table leaving this info for Chis--}}
+
+    
+        {{> plants}}
+  
     <section class="garden">
         <article class="garden_plant">
             <div class="garden_plant--planttype">
+                {{title}}
                 <img src="../assets/img/012-dwarf.svg" alt="gnome">
             </div>
             <div class="garden_plant--subrow">
@@ -16,7 +21,13 @@
                     <img src="../assets/img/029-fence.svg" alt="fence">
                 </div>
             </div>
-            </ul>
         </article>
     </section>
+
+
+
+    
+
+
+    <script src="/assets/js/droplet.js"></script>
     {{!-- drop down --}}
