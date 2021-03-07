@@ -20,9 +20,9 @@ module.exports = (app) => {
 	app.get('/garden', function (req, res) {
 		console.log('get garden called');
 		db.Plant.findAll().then(function (data) {
-			// console.log(data);
+			console.log(data);
 			let hbsObject = { garden: data };
-			return res.render('index', hbsObject);
+			 res.render('index', hbsObject);
 		});
 	});
 
