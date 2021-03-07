@@ -1,6 +1,6 @@
 const db = require('../models');
 const express = require('express');
-// var router = express.Router();
+var router = express.Router();
 
 module.exports = (app) => {
 	app.get('/', function (req, res) {
@@ -11,23 +11,19 @@ module.exports = (app) => {
 			if (data) {
 				res.redirect('/garden');
 			} else {
-				res.redirect('/garden/create');
+				res.redirect('/garden/add');
 			}
 		});
 	});
 
 	// get route that displays all plants
 	app.get('/garden', function (req, res) {
+		console.log('get garden called');
 		db.Plant.findAll().then(function (data) {
-			console.log(data);
-			var hbsObject = { garden: data };
+			// console.log(data);
+			let hbsObject = { garden: data };
 			return res.render('index', hbsObject);
 		});
-	});
-
-	// route to display 'create garden' page
-	app.get('/garden/create', function (req, res) {
-		res.render('createGarden');
 	});
 
 	// route to display 'add plant' page
