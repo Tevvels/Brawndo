@@ -20,13 +20,8 @@ module.exports = (app) => {
 	app.get('/garden', function (req, res) {
 		console.log('get garden called');
 		db.Plant.findAll().then(function (data) {
-<<<<<<< HEAD
 			console.log('data');
 			var hbsObject = { garden: data };
-=======
-			// console.log(data);
-			let hbsObject = { garden: data };
->>>>>>> main
 			return res.render('index', hbsObject);
 		});
 	});
