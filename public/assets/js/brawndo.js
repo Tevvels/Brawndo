@@ -18,14 +18,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		addPlantForm.addEventListener('submit', (e) => {
 			e.preventDefault();
 			console.log('Submit button clicked!');
-
 			const newPlant = {
 				name: document.getElementById('plantName').value.trim(),
 				outdoorIndoor: document.getElementById('indoorOutdoor').checked,
 				waterFrequency: document.getElementById('waterFrequency').value.trim(),
-				// lastWatered: new Date()
+				lastWatered: document.getElementById('lastWatered').value.trim(),
 			};
-
 			console.log(newPlant);
 
 			fetch('/garden/add', {
