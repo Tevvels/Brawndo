@@ -1,60 +1,81 @@
-const garden = document.querySelector('.garden');
+// const garden = document.querySelector('.garden');
 
-let article = document.createElement('article');
-let div = document.createElement('div');
-let imgdrop = document.createElement('img');
-let imgfence = document.createElement('img');
-let imggnome = document.createElement('img');
-let divTwo = document.createElement('div');
-let divtype = document.createElement('div');
-let divwater = document.createElement('div');
-let divlocation = document.createElement('div');
+// let article = document.createElement('article');
+// let div = document.createElement('div');
+// let imgdrop = document.createElement('img');
+// let imgfence = document.createElement('img');
+// let imggnome = document.createElement('img');
+// let divTwo = document.createElement('div');
+// let divtype = document.createElement('div');
+// let divwater = document.createElement('div');
+// let divlocation = document.createElement('div');
 
-imgfence.setAttribute('src', '../assets/img/029-fence.svg');
-imggnome.setAttribute('src', '../assets/img/012-dwarf.svg');
-imgdrop.setAttribute('src', '../assets/img/036-drop.svg');
+// imgfence.setAttribute('src', '../assets/img/029-fence.svg');
+// imggnome.setAttribute('src', '../assets/img/012-dwarf.svg');
+// imgdrop.setAttribute('src', '../assets/img/036-drop.svg');
 
-article.classList.add('garden_plant');
-div.classList.add('garden_plant--planttype');
-divTwo.classList.add('garden_plant--subrow');
-divwater.classList.add('garden_plant--water');
-divlocation.classList.add('garden_plant--location');
+// article.classList.add('garden_plant');
+// div.classList.add('garden_plant--planttype');
+// divTwo.classList.add('garden_plant--subrow');
+// divwater.classList.add('garden_plant--water');
+// divlocation.classList.add('garden_plant--location');
 
-div.appendChild(imggnome);
-divwater.appendChild(imgdrop);
-divlocation.appendChild(imgfence);
+// div.appendChild(imggnome);
+// divwater.appendChild(imgdrop);
+// divlocation.appendChild(imgfence);
 
-divTwo.appendChild(divwater);
-divTwo.appendChild(divlocation);
+// divTwo.appendChild(divwater);
+// divTwo.appendChild(divlocation);
 
-article.appendChild(div);
-article.appendChild(divTwo);
+// article.appendChild(div);
+// article.appendChild(divTwo);
 
-garden.appendChild(article);
+// garden.appendChild(article);
 
 const droplet = document.querySelectorAll('.garden_plant--water');
 
 let waterPectange = 0;
 let newNumber =  parseInt(waterPectange); 
 
-go = ()=>{
-setInterval(()=>{
-    
 
-    droplet.forEach((drop)=> {
+go = () =>{
+droplet.forEach((drop)=> { 
+    watervalue = drop.firstChild.nextSibling.getAttribute('data-watered')
+    drop.style.background = `linear-gradient(to bottom, white ${watervalue}%, blue ${watervalue}%)`;
+
+    hours = new Date();
+    console.log(hours.getHours()/2);
+    console.log(hours.getDay());
         drop.addEventListener("click",(e)=>{
-            newNumber = 0;
+            e.stopPropagation()
+            e.preventDefault()
+            newNumber = e.target.getAttribute('data-watered');
+            duration = e.target.getAttribute('data-waterFrequency');
+           
+            timee = new Date();
+            e.target.setAttribute('data-justwater',timee)
+            console.log(timee)
+            console.log(hours)
+            console.log((timee - hours)/1000)
+            console.log((timee - hours)/1000/60)
+            newNumber = (100 / duration);
+            console.log(e.target)
+            drop.style.background = `linear-gradient(to bottom, white ${newNumber}%, blue ${newNumber}%)`;
         })
-        return drop.style.background = `linear-gradient(to bottom, white ${newNumber}%, blue ${newNumber}%)`;
-    })
-    console.log(newNumber);
-        if(newNumber < 100){
-        newNumber++;
-        }else {
-            window.clearTimeout();
-        }
-    },500)
-}
 
+    }) 
+    
+}
+ 
 
 go();
+
+
+
+/* set the value of the waterlevel and place them on the object of the value button*/
+/* set a practice value of specific dayss
+    needed values. waterFrequency which would be a number like 3
+    how to set up a counter
+
+
+*/

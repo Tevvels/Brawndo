@@ -5,21 +5,44 @@
     {{!-- for each loops here using garden info from table leaving this info for Chis--}}
 
     
-        {{> plants}}
   
     <section class="garden">
         <article class="garden_plant">
             <div class="garden_plant--planttype">
-                {{title}}
-                <img src="../assets/img/012-dwarf.svg" alt="gnome">
+                
+                <h3 class="garden_plant--name"> me{{name}} </h3>
+                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
             </div>
             <div class="garden_plant--subrow">
-                <div class="garden_plant--water">
-                    <img src="../assets/img/036-drop.svg" alt="waterdroplet">
-                </div>
+                <button  class="garden_plant--water">
+                    <img  data-id="{{id}}" data-watered="75" data-waterFrequency="3" src="../assets/img/036-drop.svg" alt="waterdroplet">
+                </button>
                 <div class="garden_plant--location">
                     <img src="../assets/img/029-fence.svg" alt="fence">
                 </div>
+            </div>
+        </article>
+     
+        <article class="garden_plant">
+            <div class="garden_plant--planttype">
+               <h3 class="garden_plant--name"> me{{name}} </h3>
+                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
+            </div>
+            <div class="garden_plant--subrow">
+                <button class="garden_plant--water">
+                    <img  data-id="{{id}}" data-Watered="25" data-waterFrequency="6" src="../assets/img/036-drop.svg" alt="waterdroplet">
+                </button>
+                <div class="garden_plant--location">
+
+                    <img src="../assets/img/029-fence.svg" alt="fence">
+                </div>
+            </div>
+        </article>
+        <article class="garden_plant">
+            <div class="garden_plant--planttype">
+               <h3 class="garden_plant--name"> me{{name}} </h3>
+               <button class="garden_plant--add" href="/garden/add" ><link href="/garden/add">+</button>
+                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
             </div>
         </article>
     </section>
