@@ -33,6 +33,7 @@ module.exports = (app) => {
 
 	// post route that inserts a new plant into Plants in brawndo_db
 	app.post('/garden/add', (req, res) => {
-		db.Plant.create(req.body).then(res.redirect('/garden'));
+		console.log('hello')
+		db.Plant.create(req.body).then(/*res.redirect('/garden')*/);
 	});
 };

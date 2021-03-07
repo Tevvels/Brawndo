@@ -18,20 +18,43 @@ footer {
   .nav {
     height: 100px;
   }
+  .gnome {
+    height: 200px;
+    position: relative;
+    bottom: -175px;
+  }
   .garden {
     margin: 25px;
     position: relative;
     margin: 0 auto;
   }
   .garden_plant {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 65px;
+    margin-top: 175px;
+    margin-left: 50px;
     height: 500px;
     width: 85%;
     -webkit-box-shadow: 0 5px 10px black;
             box-shadow: 0 5px 10px black;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(9%, green), color-stop(10%, white), to(lightblue));
+    background: linear-gradient(to top, green 9%, white 10%, lightblue);
+  }
+  .garden_plant--name {
+    text-align: center;
+  }
+  .garden_plant--add {
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    background-color: yellow;
+    font-size: 25px;
+    position: absolute;
+    left: 45%;
+    top: 3%;
+    border-radius: 50%;
   }
   .garden_plant--planttype {
     height: 80%;
@@ -51,6 +74,11 @@ footer {
 }
 
 @media only screen and (min-width: 1240px) {
+  .gnome {
+    height: 100px;
+    position: relative;
+    bottom: 0px;
+  }
   .garden {
     margin: 25px;
     position: relative;
