@@ -16,9 +16,8 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false,
 		},
 		lastWatered: {
-			type: DataTypes.DATE,
-			allowNull: true,
-			defaultValue: 12,
+			type: DataTypes.STRING,
+			allowNull: false,
 		},
 	});
 
