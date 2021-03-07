@@ -42,11 +42,13 @@ go = () =>{
 droplet.forEach((drop)=> { 
     watervalue = drop.firstChild.nextSibling.getAttribute('data-watered')
     drop.style.background = `linear-gradient(to bottom, white ${watervalue}%, blue ${watervalue}%)`;
-
+  
     hours = new Date();
     console.log(hours.getHours()/2);
     console.log(hours.getDay());
-        drop.addEventListener("click",(e)=>{
+  
+  
+    drop.addEventListener("click",(e)=>{
             e.stopPropagation()
             e.preventDefault()
             newNumber = e.target.getAttribute('data-watered');
@@ -62,9 +64,7 @@ droplet.forEach((drop)=> {
             console.log(e.target)
             drop.style.background = `linear-gradient(to bottom, white ${newNumber}%, blue ${newNumber}%)`;
         })
-
-    }) 
-    
+    })   
 }
  
 
