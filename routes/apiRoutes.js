@@ -12,6 +12,8 @@ module.exports = (app) => {
 		db.Plant.findAll().then(function (data) {
 			// console.log(data);
 			let hbsObject = { garden: data };
+			function formatDate() {}
+			formatDate();
 			res.render('index', hbsObject);
 		});
 		console.log('get garden called');
