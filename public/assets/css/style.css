@@ -9,10 +9,10 @@
   height: 100vh;
 }
 
-footer {
+/* footer {
   position: fixed;
   bottom: 0;
-}
+} */
 
 @media only screen and (min-width: 768px) {
   /* .nav {
@@ -174,7 +174,7 @@ footer {
 
 .footer-copyright {
   height: 50px;
-
+  width: 100%;
 }
 
 .footer-copyright a {
@@ -185,17 +185,14 @@ footer {
 .bgcolor {
 
   background-color: #031926;
-
 }
 
 .nav-wrapper img {
-
   max-width: 40px;
   max-height: 40px;
 
 }
 
 body {
-
   background-color: #FBF0EF
 }
