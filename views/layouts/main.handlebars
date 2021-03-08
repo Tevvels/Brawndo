@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
     <title>Brawndo</title>
 
     {{!-- favicon information --}}
     <link rel="icon" type="image/png" href="#">
 
-    {{!--lik to materialize --}}
+    {{!-- materialize css info --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    {{!-- link to personal style sheet --}}
-    <link rel="stylesheet" href="../../public/assets/css/style.css" />
+    {{!-- materialize icon info --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {{!-- personal style sheet --}}
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
 
 
@@ -21,16 +23,37 @@
 
 
 <body>
+
+    <nav class="nav bgcolor">
+        <div class="nav-wrapper ">
+
+            <a href="#" class="brand-logo center">Brawndo<img src="./assets/img/012-dwarf.png" alt="gnome"></a>
+
+        </div>
+    </nav>
+
     {{{ body }}}
 
-    {{!-- materialize JS --}}
+
+    <footer class="footer-copyright white-text bgcolor">
+        <span class="container">
+
+            <p class="white-text center">© 2021 Copyright <a href="https://github.com/lukeoxner">Luke Oxner, </a><a
+                    href="https://github.com/trevvels">Christopher Watkins, </a><a
+                    href="https://github.com/domihorinka">Dominique
+                    Horinka, </a><a href="https://github.com/wtekverk">Wendy Tekverk </a></p>
+        </span>
+    </footer>
+
+    {{!-- connect to materialize js --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    {{!-- jQuery link --}}
+    {{!-- connect to jQuery --}}
     <script src="https://code.jquery.com/jquery.js"></script>
 
-    {{!-- personal JS --}}
-    <script src="/public/js/brawndo.js"></script>
+    {{!-- connect to brawndo JS --}}
+
+
 </body>
 
 </html>

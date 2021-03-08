@@ -16,10 +16,13 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false,
 		},
 		lastWatered: {
-			type: DataTypes.INTEGER,
+			type: DataTypes.STRING,
 			allowNull: false,
-		}
-
+		},
+		lastWatered: {
+			type: DataTypes.DATE,
+			allowNull: false,
+		},
 	});
 
 	return Plant;
