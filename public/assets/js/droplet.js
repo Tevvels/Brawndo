@@ -35,41 +35,57 @@
 const droplet = document.querySelectorAll('.garden_plant--water');
 
 let waterPectange = 0;
-let newNumber =  parseInt(waterPectange); 
+let newNumber = parseInt(waterPectange);
 
 
-go = () =>{
-droplet.forEach((drop)=> { 
-    watervalue = drop.firstChild.nextSibling.getAttribute('data-watered')
-    drop.style.background = `linear-gradient(to bottom, white ${watervalue}%, blue ${watervalue}%)`;
-  
-    hours = new Date();
-    console.log(hours.getHours()/2);
-    console.log(hours.getDay());
-  
-  
-    drop.addEventListener("click",(e)=>{
+go = () => {
+    droplet.forEach((drop) => {
+        watervalue = drop.firstChild.nextSibling.getAttribute('data-watered')
+        drop.style.background = `linear-gradient(to bottom, white ${watervalue}%, blue ${watervalue}%)`;
+
+        hours = new Date();
+        console.log(hours.getHours() / 2);
+        console.log(hours.getDay());
+
+
+        drop.addEventListener("click", (e) => {
             e.stopPropagation()
             e.preventDefault()
             newNumber = e.target.getAttribute('data-watered');
             duration = e.target.getAttribute('data-waterFrequency');
-           
+
             timee = new Date();
-            e.target.setAttribute('data-justwater',timee)
+            e.target.setAttribute('data-justwater', timee)
             console.log(timee)
             console.log(hours)
-            console.log((timee - hours)/1000)
-            console.log((timee - hours)/1000/60)
+            console.log((timee - hours) / 1000)
+            console.log((timee - hours) / 1000 / 60)
             newNumber = (100 / duration);
             console.log(e.target)
             drop.style.background = `linear-gradient(to bottom, white ${newNumber}%, blue ${newNumber}%)`;
         })
-    })   
+    })
+
 }
- 
+
+
+
+
 
 go();
 
+const addBtn = document.getElementById('add-plant');
+
+addBtn.addEventListener('click', function () {
+    console.log(event.target)
+    fetch('/garden/add', {
+        method: 'GET',
+    }).then((data) => {
+        console.log("redirect successful")
+        // location.reload();
+
+    });
+})
 
 
 /* set the value of the waterlevel and place them on the object of the value button*/
