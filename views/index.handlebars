@@ -23,40 +23,39 @@
                     <img src="../assets/img/029-fence.svg" alt="fence">
                 </div>
             </div>
+        </article>
+        {{/each}}
+
+        {{!-- <article class="garden_plant">
+            <div class="garden_plant--planttype">
+                <h3 class="garden_plant--name"> me{{this.Plant.dataValues.name}} </h3>
+                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
+            </div>
+            <div class="garden_plant--subrow">
+                <button class="garden_plant--water">
+                    <img data-id="{{id}}" data-Watered="25" data-waterFrequency="6" src="../assets/img/036-drop.svg"
+                        alt="waterdroplet">
+                </button>
+                <div class="garden_plant--location">
+
+                    <img src="../assets/img/029-fence.svg" alt="fence">
+                </div>
+            </div>
+        </article> --}}
+
+        <article class="garden_plant">
+            <div class="garden_plant--planttype">
+                <h3 class="garden_plant--name" style="color: #CBE6EF"> . </h3>
+                <button class="garden_plant--add" href="/garden/add">
+                    <link href="/garden/add">+
+                </button>
+                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
+            </div>
+        </article>
+    </section>
+
+
 </div>
-</article>
-{{/each}}
-
-{{!-- <article class="garden_plant">
-    <div class="garden_plant--planttype">
-        <h3 class="garden_plant--name"> me{{this.Plant.dataValues.name}} </h3>
-        <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
-    </div>
-    <div class="garden_plant--subrow">
-        <button class="garden_plant--water">
-            <img data-id="{{id}}" data-Watered="25" data-waterFrequency="6" src="../assets/img/036-drop.svg"
-                alt="waterdroplet">
-        </button>
-        <div class="garden_plant--location">
-
-            <img src="../assets/img/029-fence.svg" alt="fence">
-        </div>
-    </div>
-</article> --}}
-
-<article class="garden_plant">
-    <div class="garden_plant--planttype">
-        <h3 class="garden_plant--name"> {{name}} </h3>
-        <button class="garden_plant--add" id="add-plant" href="/garden/add">
-            <link href="/garden/add">+
-        </button>
-        <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
-    </div>
-</article>
-</section>
-
-
-
 
 
 
