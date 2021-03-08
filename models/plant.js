@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		lastWatered: {
+			type: DataTypes.DATE,
+			allowNull: false,
+		},
 	});
 
 	return Plant;

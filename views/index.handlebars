@@ -16,48 +16,49 @@
             </div>
             <div class="garden_plant--subrow">
                 <button class="garden_plant--water">
-                    <img data-id="{{this.dataValues.id}}" data-watered="75" data-waterFrequency="3"
-                        src="../assets/img/036-drop.svg" alt="waterdroplet">
+                    <img data-id={{this.dataValues.id}} data-watered="75" data-create=`{{this.dataValues.createdAt}}`
+                        data-waterFrequency="3" src="../assets/img/036-drop.svg" alt="waterdroplet">
                 </button>
                 <div class="garden_plant--location">
                     <img src="../assets/img/029-fence.svg" alt="fence">
                 </div>
             </div>
-        </article>
-        {{/each}}
+</div>
+</article>
+{{/each}}
 
-        {{!-- <article class="garden_plant">
-            <div class="garden_plant--planttype">
-                <h3 class="garden_plant--name"> me{{this.Plant.dataValues.name}} </h3>
-                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
-            </div>
-            <div class="garden_plant--subrow">
-                <button class="garden_plant--water">
-                    <img data-id="{{id}}" data-Watered="25" data-waterFrequency="6" src="../assets/img/036-drop.svg"
-                        alt="waterdroplet">
-                </button>
-                <div class="garden_plant--location">
+{{!-- <article class="garden_plant">
+    <div class="garden_plant--planttype">
+        <h3 class="garden_plant--name"> me{{this.Plant.dataValues.name}} </h3>
+        <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
+    </div>
+    <div class="garden_plant--subrow">
+        <button class="garden_plant--water">
+            <img data-id="{{id}}" data-Watered="25" data-waterFrequency="6" src="../assets/img/036-drop.svg"
+                alt="waterdroplet">
+        </button>
+        <div class="garden_plant--location">
 
-                    <img src="../assets/img/029-fence.svg" alt="fence">
-                </div>
-            </div>
-        </article> --}}
+            <img src="../assets/img/029-fence.svg" alt="fence">
+        </div>
+    </div>
+</article> --}}
 
-        <article class="garden_plant">
-            <div class="garden_plant--planttype">
-                <h3 class="garden_plant--name"> {{name}} </h3>
-                <button class="garden_plant--add" id="add-plant" href="/garden/add">
-                    <link href="/garden/add">+
-                </button>
-                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
-            </div>
-        </article>
-    </section>
-
-
-
+<article class="garden_plant">
+    <div class="garden_plant--planttype">
+        <h3 class="garden_plant--name"> {{name}} </h3>
+        <button class="garden_plant--add" id="add-plant" href="/garden/add">
+            <link href="/garden/add">+
+        </button>
+        <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
+    </div>
+</article>
+</section>
 
 
 
-    <script src="/assets/js/droplet.js"></script>
-    {{!-- drop down --}}
+
+
+
+<script src="/assets/js/droplet.js"></script>
+{{!-- drop down --}}

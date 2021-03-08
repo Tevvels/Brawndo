@@ -53,12 +53,14 @@ go = () => {
             e.preventDefault()
             newNumber = e.target.getAttribute('data-watered');
             duration = e.target.getAttribute('data-waterFrequency');
+            created = e.target.getAttribute('data-create');
+            console.log(created);
 
             timee = new Date();
             e.target.setAttribute('data-justwater', timee)
-            console.log(timee)
-            console.log(hours)
-            console.log((timee - hours) / 1000)
+            // console.log(timee)
+            // console.log(hours)
+            // console.log((timee - hours)/1000)
             console.log((timee - hours) / 1000 / 60)
             newNumber = (100 / duration);
             console.log(e.target)
@@ -92,6 +94,9 @@ addBtn.addEventListener('click', function () {
 /* set a practice value of specific dayss
     needed values. waterFrequency which would be a number like 3
     how to set up a counter
+
+    loop that runs thorught the 
+
 
 
 */
