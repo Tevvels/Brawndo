@@ -11,37 +11,20 @@
 
         <article class="garden_plant">
             <div class="garden_plant--planttype">
-                <h3 class="garden_plant--name">{{this.dataValues.name}} </h3>
+                <h3 class="garden_plant--name">{{this.name}} </h3>
                 <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
             </div>
             <div class="garden_plant--subrow">
                 <button class="garden_plant--water">
-                    <img data-id={{this.dataValues.id}} data-watered="75" data-create=`{{this.dataValues.createdAt}}`
+                    <img data-id={{this.id}} data-watered={{this.waterPct}} data-create={{this.createdAt}}
                         data-waterFrequency="3" src="../assets/img/036-drop.svg" alt="waterdroplet">
                 </button>
                 <div class="garden_plant--location">
-                    <img src="../assets/img/{{this.dataValues.outdoorIndoor}}.svg" alt="fence">
+                    <img src="../assets/img/{{this.outdoorIndoor}}.svg" alt="fence">
                 </div>
             </div>
         </article>
         {{/each}}
-
-        {{!-- <article class="garden_plant">
-            <div class="garden_plant--planttype">
-                <h3 class="garden_plant--name"> me{{this.Plant.dataValues.name}} </h3>
-                <img src="../assets/img/012-dwarf.svg" class="gnome" alt="gnome">
-            </div>
-            <div class="garden_plant--subrow">
-                <button class="garden_plant--water">
-                    <img data-id="{{id}}" data-Watered="25" data-waterFrequency="6" src="../assets/img/036-drop.svg"
-                        alt="waterdroplet">
-                </button>
-                <div class="garden_plant--location">
-
-                    <img src="../assets/img/029-fence.svg" alt="fence">
-                </div>
-            </div>
-        </article> --}}
 
         <article class="garden_plant">
             <div class="garden_plant--planttype">
