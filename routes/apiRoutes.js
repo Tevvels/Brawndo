@@ -8,32 +8,41 @@ module.exports = (app) => {
 		db.Plant.findAll().then(function (data) {
 			// console.log(data);
 			let hbsObject = { garden: data };
+			let newArr = [];
 			function formatDate(hbsObject) {
 				// console.log(hbsObject);
 				hbsObject.garden.forEach((plant) => {
 					let lastWater = plant.dataValues.lastWatered;
-					let current = moment();
-					console.log('last water: ' + lastWater);
-					console.log('current: ' + current);
-
-					let diff = current - lastWater;
-					console.log('diff: ' + diff);
-
-					let formatted = diff / 1000 / 60 / 60 / 24;
-					console.log('formatted: ' + formatted);
-
 					let waterFrequency = plant.dataValues.waterFrequency;
-					console.log('water freq: ' + waterFrequency);
+					let current = moment();
 
-					let waterPercent = formatted / waterFrequency;
-					console.log('Water Pct: ' + waterPercent);
+					// console.log('last water: ' + lastWater);
+					// console.log('current: ' + current);
+					// console.log('water freq: ' + waterFrequency);
 
-					let formatPct = Math.floor(waterPercent * 100);
-					console.log('format pct: ' + formatPct);
+					let diff = (current - lastWater) / 1000 / 60 / 60 / 24;
+					// console.log('diff: ' + diff);
+
+					let waterPct = Math.floor((diff / waterFrequency) * 100);
+					console.log('formatted water pct: ' + waterPct);
+
+					let newPlant = {
+						id: plant.dataValues.id,
+						name: plant.dataValues.name,
+						outdoorIndoor: plant.dataValues.outdoorIndoor,
+						waterFrequency: plant.dataValues.waterFrequency,
+						lastWatered: plant.dataValues.lastWatered,
+						waterPct: waterPct,
+					};
+
+					// console.log(newPlant);
+					newArr.push(newPlant);
 				});
 			}
 			formatDate(hbsObject);
-			res.render('index', hbsObject);
+			let newHbsObj = { garden: newArr };
+			console.log(newHbsObj);
+			res.render('index', newHbsObj);
 		});
 		console.log('get garden called');
 		return;

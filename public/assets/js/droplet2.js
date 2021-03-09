@@ -7,9 +7,7 @@ go = () => {
 	droplet.forEach((drop) => {
 		let watervalue = drop.firstChild.nextSibling.getAttribute('data-watered');
 		console.log(watervalue);
-		drop.style.background = `linear-gradient(to bottom, white ${watervalue}%, blue ${
-			100 - watervalue
-		}%)`;
+		drop.style.background = `linear-gradient(to bottom, white ${watervalue}%, blue ${watervalue}%)`;
 
 		drop.addEventListener('click', (e) => {
 			e.stopPropagation();
