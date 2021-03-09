@@ -1,12 +1,4 @@
-//
-//
-//
-//
 // Code for routes, etc
-//
-//
-//
-//
 
 document.addEventListener('DOMContentLoaded', (event) => {
 	console.log('DOM loaded!');
