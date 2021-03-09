@@ -1,3 +1,4 @@
+// functionality to enable logo button link
 const logo = document.getElementById('logo');
 
 logo.addEventListener('click', (e) => {
