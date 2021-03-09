@@ -16,16 +16,12 @@ module.exports = (app) => {
 					let waterFrequency = plant.dataValues.waterFrequency;
 					let current = moment();
 
-					// console.log('last water: ' + lastWater);
-					// console.log('current: ' + current);
-					// console.log('water freq: ' + waterFrequency);
-
 					let diff = (current - lastWater) / 1000 / 60 / 60 / 24;
-					// console.log('diff: ' + diff);
-
 					let waterPct = Math.floor((diff / waterFrequency) * 100);
+
 					console.log('formatted water pct: ' + waterPct);
 
+					// constructing new object that includes waterPct
 					let newPlant = {
 						id: plant.dataValues.id,
 						name: plant.dataValues.name,
@@ -35,13 +31,12 @@ module.exports = (app) => {
 						waterPct: waterPct,
 					};
 
-					// console.log(newPlant);
 					newArr.push(newPlant);
 				});
 			}
 			formatDate(hbsObject);
 			let newHbsObj = { garden: newArr };
-			console.log(newHbsObj);
+			// console.log(newHbsObj);
 			res.render('index', newHbsObj);
 		});
 		console.log('get garden called');
@@ -60,7 +55,7 @@ module.exports = (app) => {
 					id: req.params.id,
 				},
 			}
-		).then(function (data) {
+		).then(() => {
 			res.redirect('/garden');
 		});
 	});
